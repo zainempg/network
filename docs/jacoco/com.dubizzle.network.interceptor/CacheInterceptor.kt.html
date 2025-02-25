@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CacheInterceptor.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">network</a> &gt; <a href="index.source.html" class="el_package">com.dubizzle.network.interceptor</a> &gt; <span class="el_source">CacheInterceptor.kt</span></div><h1>CacheInterceptor.kt</h1><pre class="source lang-java linenums">package com.dubizzle.network.interceptor
+
+import com.dubizzle.network.anotations.CacheRequest
+import okhttp3.CacheControl
+import okhttp3.Interceptor
+import okhttp3.Response
+import retrofit2.Invocation
+import java.util.concurrent.TimeUnit
+
+/**
+ * `CacheInterceptor` is an OkHttp [Interceptor] that adds caching directives to requests based on the presence of a [CacheRequest] annotation on the associated method.
+ *
+ * This interceptor inspects the method associated with a request (via the `Invocation` tag) and checks for the presence of the `@CacheRequest` annotation.
+ * If the annotation is present, it extracts the `maxAge` value from it and adds a `Cache-Control` header to the request, instructing the cache to consider the response valid for the specified duration.
+ * If no `CacheRequest` annotation is found, the request is passed through without modification.
+ *
+ * **Functionality:**
+ * - **Annotation-Driven Caching:** Enables caching for specific requests by annotating the corresponding method with `@CacheRequest`.
+ * - **`maxAge` Control:** Uses the `maxAge` property of the `@CacheRequest` annotation to set the maximum age of cached responses.
+ * - **OkHttp Integration:** Seamlessly integrates with OkHttp's interceptor mechanism.
+ * - **No-Op for Unannotated Methods:** Does not alter requests that are not associated with a method having the `@CacheRequest` annotation.
+ *
+ * **Usage:**
+ * 1. Add this `CacheInterceptor` to your OkHttp client's interceptor chain.
+ * 2. Annotate the methods that need caching with `@CacheRequest`.
+ *
+ *     ```kotlin
+ *     @Retention(AnnotationRetention.RUNTIME)
+ *     @Target(AnnotationTarget.FUNCTION)
+ *     annotation class CacheRequest(val maxAge: Int)
+ *
+ *     interface MyService {
+ *         @CacheRequest(maxAge = 300) // Cache for 5 minutes (300 seconds)
+ *         @GET(&quot;/data&quot;)
+ *         suspend fun getData(): Response
+ *
+ *         @GET(&quot;/other-data&quot;) // No caching directives
+ *         suspend fun getOtherData(): Response
+ *     }
+ *
+ */
+<span class="nc" id="L42">class CacheInterceptor : Interceptor {</span>
+    override fun intercept(chain: Interceptor.Chain): Response {
+        // Get the request from the chain.
+<span class="nc" id="L45">        var request = chain.request()</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">        val annotation = request.tag(Invocation::class.java)?.method()</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">            ?.getAnnotation(CacheRequest::class.java)</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">        annotation?.let {</span>
+<span class="nc" id="L49">            val cacheControl = CacheControl.Builder()</span>
+<span class="nc" id="L50">                .maxAge(it.maxAge, TimeUnit.SECONDS)</span>
+<span class="nc" id="L51">                .build()</span>
+<span class="nc" id="L52">            request = request.newBuilder()</span>
+<span class="nc" id="L53">                .cacheControl(cacheControl)</span>
+<span class="nc" id="L54">                .build()</span>
+<span class="nc" id="L55">        }</span>
+<span class="nc" id="L56">        return chain.proceed(request)</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

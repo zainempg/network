@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NetworkException.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">network</a> &gt; <a href="index.source.html" class="el_package">com.dubizzle.network.models</a> &gt; <span class="el_source">NetworkException.kt</span></div><h1>NetworkException.kt</h1><pre class="source lang-java linenums">package com.dubizzle.network.models
+
+/**
+ * A sealed class representing various network-related exceptions.
+ *
+ * This class provides a structured way to handle different types of network errors,
+ * such as API errors, connectivity issues, and unknown exceptions.
+ *
+ * @property errorCode An integer code representing the type of error.
+ * @property message A descriptive message about the error.
+ * @property errorResponse An optional [ErrorResponse] object containing detailed error information.
+ */
+<span class="nc" id="L13">sealed class NetworkException(</span>
+<span class="nc" id="L14">    open val errorCode: Int,</span>
+<span class="nc" id="L15">    override val message: String,</span>
+<span class="nc" id="L16">    open val errorResponse: ErrorResponse? = null</span>
+<span class="nc" id="L17">) : Throwable() {</span>
+    /**
+     * Represents an API exception that occurs during network communication.
+     *
+     * This exception inherits from [NetworkException] and provides additional information
+     * specific to API errors, such as the error code and an optional error response object.
+     *
+     * @param errorCode The error code returned by the API.
+     * @param message A human-readable message describing the error.
+     * @param errorResponse An optional [ErrorResponse] object containing detailed error information.
+     */
+<span class="nc" id="L28">    data class ApiException(</span>
+<span class="nc" id="L29">        override val errorCode: Int,</span>
+<span class="nc" id="L30">        override val message: String,</span>
+<span class="nc" id="L31">        override val errorResponse: ErrorResponse? = null</span>
+<span class="nc" id="L32">    ) : NetworkException(errorCode, message, errorResponse)</span>
+
+    /**
+     * Represents an exception thrown when there is no internet connection.
+     *
+     * This exception is typically thrown when a network operation fails due to the
+     * device being offline or having no internet access.
+     *
+     * @property errorCode The error code associated with this exception. Defaults to 2.
+     * @property message The error message associated with this exception. Defaults to &quot;Socket Timeout&quot;.
+     */
+<span class="nc" id="L43">    data class NoInternet(</span>
+<span class="nc" id="L44">        override val errorCode: Int = 2,</span>
+<span class="nc" id="L45">        override val message: String = &quot;Socket Timeout&quot;</span>
+<span class="nc" id="L46">    ) : NetworkException(errorCode, message)</span>
+
+    /**
+     * Represents an exception that is thrown when a host cannot be resolved to an IP address.
+     *
+     * This exception is a subclass of [NetworkException] and indicates a problem with network connectivity
+     * where the hostname provided could not be found or resolved.
+     *
+     * @property errorCode The error code associated with the exception, defaults to 8.
+     * @property message The error message associated with the exception, defaults to &quot;UnknownHostException&quot;.
+     */
+<span class="nc" id="L57">    data class UnknownHostException(</span>
+<span class="nc" id="L58">        override val errorCode: Int = 8,</span>
+<span class="nc" id="L59">        override val message: String = &quot;UnknownHostException&quot;</span>
+<span class="nc" id="L60">    ) : NetworkException(errorCode, message)</span>
+
+    /**
+     * Represents an IOException that occurred during a network operation.
+     *
+     * This exception is typically thrown when there is an error related to input/output operations,
+     * such as reading or writing data to a network stream.
+     *
+     * @property errorCode The error code associated with the exception. Defaults to 9.
+     * @property message A descriptive message about the exception. Defaults to &quot;IOException&quot;.
+     */
+<span class="nc" id="L71">    data class IOException(</span>
+<span class="nc" id="L72">        override val errorCode: Int = 9,</span>
+<span class="nc" id="L73">        override val message: String = &quot;IOException&quot;</span>
+<span class="nc" id="L74">    ) : NetworkException(errorCode, message)</span>
+
+    /**
+     * Represents an IllegalStateException that occurs during network operations.
+     *
+     * This exception is typically thrown when an operation is attempted in an illegal or inappropriate state.
+     *
+     * @property errorCode The error code associated with this exception, defaults to 11.
+     * @property message The error message describing the exception, defaults to &quot;IllegalStateException&quot;.
+     */
+<span class="nc" id="L84">    data class IllegalStateException(</span>
+<span class="nc" id="L85">        override val errorCode: Int = 11,</span>
+<span class="nc" id="L86">        override val message: String = &quot;IllegalStateException&quot;</span>
+<span class="nc" id="L87">    ) : NetworkException(errorCode, message)</span>
+
+    /**
+     * A default implementation of [NetworkException] representing an unknown or generic error.
+     *
+     * This exception is typically used when a specific exception type is not available
+     * or when the underlying cause is unknown.
+     *
+     * @property errorCode The error code associated with the exception. Defaults to 1.
+     * @property message A descriptive message about the exception. Defaults to &quot;UnKnown Exception&quot;.
+     * @property cause The underlying cause of the exception, if available.
+     */
+<span class="nc" id="L99">    data class DefaultException(</span>
+<span class="nc" id="L100">        override val errorCode: Int = 1,</span>
+<span class="nc" id="L101">        override val message: String = &quot;UnKnown Exception&quot;,</span>
+<span class="nc" id="L102">        override val cause: Throwable?</span>
+<span class="nc" id="L103">    ) : NetworkException(1, message)</span>
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
