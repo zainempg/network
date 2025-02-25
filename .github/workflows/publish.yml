@@ -1,0 +1,44 @@
+name: Publish aar to GitHub Packages
+run-name: ${{ inputs.branch_name }} - ${{ inputs.release_version_name }}
+
+on:
+  pull_request:
+    branches:
+      - master
+
+  workflow_dispatch:
+    inputs:
+      branch_name:
+        description: "Branch to build from (e.g., main, develop)"
+        required: true
+        default: "develop"
+      release_version_name:
+        description: "Enter version name (e.g., 1.0.0)"
+        required: true
+      release_notes:
+        description: "Release notes"
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Publish to GitHub Packages
+        run: ./gradlew publish
+        env:
+          GPR_TOKEN: ${{ secrets.GPR_TOKEN }}
+          GPR_USERNAME: ${{ secrets.GPR_USERNAME }}
+          VERSION_NAME: ${{ github.event.inputs.release_version_name }}
