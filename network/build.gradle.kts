@@ -6,7 +6,9 @@ plugins {
     id("org.jetbrains.dokka") version "1.8.10"
     id("jacoco") // Add JaCoCo plugin
 }
-
+jacoco {
+    toolVersion = "0.8.8" // Specify the JaCoCo version
+}
 android {
     namespace = "com.dubizzle.network"
     compileSdk = 34
@@ -54,6 +56,13 @@ dependencies {
     implementation (libs.gson)
     implementation (libs.koin.android)
     implementation (libs.kotlinx.serialization.json)
+
+    implementation(libs.androidx.core.ktx)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit.ktx)
+
+    testImplementation(libs.mockk)
+    testImplementation (libs.test.core.ktx)
 
 }
 
