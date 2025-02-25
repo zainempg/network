@@ -30,13 +30,13 @@ jobs:
       - name: Deploy Docs to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dubizzleUtil/build/dokka
+          folder: notification/build/dokka
           token: ${{ secrets.DEPLOY_TOKEN }}
           target-folder: /docs/dokka/
 
       - name: Deploy Code Coverage Report to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dubizzleUtil/build/reports/jacoco/jacocoTestReport/html
+          folder: notification/build/reports/jacoco/jacocoTestReport/html
           token: ${{ secrets.DEPLOY_TOKEN }}
           target-folder: docs/jacoco/

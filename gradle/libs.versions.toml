@@ -187,7 +187,7 @@ viewpager2 = "1.0.0"
 workRuntime = "2.9.0"
 workRuntimeKtx = "2.9.0"
 concurrentFutures = "1.2.0"
-dubizzleUtils  = "0.0.5_beta"
+dubizzleUtils = "0.0.5_beta"
 
 [libraries]
 adapterdelegates3 = { module = "com.hannesdorfmann:adapterdelegates3", version.ref = "adapterdelegates3" }
@@ -228,8 +228,8 @@ glide-compose = { module = "com.github.bumptech.glide:compose", version = "1.0.0
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
-androidx-activityCompose = { module = "androidx.activity:activity-compose" ,version.ref = "activity-compose" }
-androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose"  ,version.ref = "constraintlayoutCompose"}
+androidx-activityCompose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
+androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle-viewmodel" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 androidx-multidex = { module = "androidx.multidex:multidex", version.ref = "multidex" }
@@ -324,8 +324,8 @@ dialogplus = { module = "com.orhanobut:dialogplus", version.ref = "dialogplus" }
 endless-recycler-view = { module = "com.github.yasevich:endless-recycler-view", version.ref = "endless-recycler-view" }
 facebook-android-sdk = { module = "com.facebook.android:facebook-android-sdk", version.ref = "facebook-android-sdk" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
-firebase-firestore = { module = "com.google.firebase:firebase-firestore"}
-firebase-auth = { module = "com.google.firebase:firebase-auth"}
+firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
+firebase-auth = { module = "com.google.firebase:firebase-auth" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 firebase-config = { module = "com.google.firebase:firebase-config" }
 firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
@@ -416,10 +416,10 @@ smartadapter = { module = "tv.teads.sdk.android:smartadapter", version.ref = "sm
 ssp-android = { module = "com.intuit.ssp:ssp-android", version.ref = "sspAndroid" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 tooltip = { module = "com.github.vihtarb:tooltip", version.ref = "tooltip" }
-uqudo-sdk = { module = "io.uqudo.sdk:Uqudo", version.ref = "uqudo"}
+uqudo-sdk = { module = "io.uqudo.sdk:Uqudo", version.ref = "uqudo" }
 work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "workRuntimeKtx" }
 concurrentfutures = { group = "androidx.concurrent", name = "concurrent-futures-ktx", version.ref = "concurrentFutures" }
-glide-transformation = {module = "jp.wasabeef:glide-transformations",version = "4.3.0"}
+glide-transformation = { module = "jp.wasabeef:glide-transformations", version = "4.3.0" }
 #Compose libraries
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
 androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
@@ -428,12 +428,12 @@ androidx-compose-compiler = { module = "androidx.compose.compiler:compiler", ver
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-compose-ui-util = { group = "androidx.compose.ui", name = "ui-util" }
-androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview"}
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
 androidx-compose-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata" }
 androidx-compose-material = { module = "androidx.compose.material:material", version.ref = "androidx-material" }
 androidx-compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "androidx-material3" }
-dubizzle-util= { module = "com.dubizzle:util", version.ref = "dubizzleUtils" }
+dubizzle-util = { module = "com.dubizzle:util", version.ref = "dubizzleUtils" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "gradle" }
