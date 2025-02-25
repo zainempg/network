@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>NetworkModuleBuilder</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>network</span>
+            </a>
+    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":network:dokkaHtml/release">androidJvm</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="network::com.dubizzle.network.builder/NetworkModuleBuilder///PointingToDeclaration//-1323912434">
+  <div class="breadcrumbs"><a href="../../../index.html">network</a><span class="delimiter">/</span><a href="../index.html">com.dubizzle.network.builder</a><span class="delimiter">/</span><span class="current">NetworkModuleBuilder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Network</span><wbr></wbr><span>Module</span><wbr></wbr><span><span>Builder</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":network:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">NetworkModuleBuilder</a></div><p class="paragraph">A builder class for creating and configuring a Retrofit instance.</p><p class="paragraph">This class provides a fluent API for adding various components to the Retrofit instance, such as interceptors, converters, call adapters, and network configurations.</p><p class="paragraph">Usage:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val retrofit = NetworkModuleBuilder()<br>    .addInterceptor(HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY })<br>    .addConverterFactory(GsonConverterFactory.create())<br>    .buildRetrofit(&quot;https://api.example.com/&quot;)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1457749806%2FConstructors%2F-1323912434" anchor-label="NetworkModuleBuilder" id="-1457749806%2FConstructors%2F-1323912434" data-filterable-set=":network:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":network:dokkaHtml/release" data-filterable-set=":network:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-network-module-builder.html"><span>Network</span><wbr></wbr><span>Module</span><wbr></wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1457749806%2FConstructors%2F-1323912434"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":network:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-128379625%2FFunctions%2F-1323912434" anchor-label="addCallAdapterFactory" id="-128379625%2FFunctions%2F-1323912434" data-filterable-set=":network:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":network:dokkaHtml/release" data-filterable-set=":network:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-call-adapter-factory.html"><span>add</span><wbr></wbr><span>Call</span><wbr></wbr><span>Adapter</span><wbr></wbr><span><span>Factory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-128379625%2FFunctions%2F-1323912434"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":network:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="add-call-adapter-factory.html"><span class="token function">addCallAdapterFactory</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">callAdapterFactory<span class="token operator">: </span><span data-unresolved-link="retrofit2/CallAdapter.Factory///PointingToDeclaration/">CallAdapter.Factory</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">NetworkModuleBuilder</a></div><div class="brief "><p class="paragraph">Adds a <span data-unresolved-link="retrofit2/CallAdapter.Factory///PointingToDeclaration/">CallAdapter.Factory</span> to the list of call adapter factories used by Retrofit.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1443244857%2FFunctions%2F-1323912434" anchor-label="addConverterFactory" id="1443244857%2FFunctions%2F-1323912434" data-filterable-set=":network:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":network:dokkaHtml/release" data-filterable-set=":network:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-converter-factory.html"><span>add</span><wbr></wbr><span>Converter</span><wbr></wbr><span><span>Factory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1443244857%2FFunctions%2F-1323912434"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":network:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="add-converter-factory.html"><span class="token function">addConverterFactory</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">converterFactory<span class="token operator">: </span><span data-unresolved-link="retrofit2/Converter.Factory///PointingToDeclaration/">Converter.Factory</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">NetworkModuleBuilder</a></div><div class="brief "><p class="paragraph">Adds a <span data-unresolved-link="retrofit2/Converter.Factory///PointingToDeclaration/">Converter.Factory</span> to the list of converter factories used by Retrofit.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1984318099%2FFunctions%2F-1323912434" anchor-label="addCookieJar" id="-1984318099%2FFunctions%2F-1323912434" data-filterable-set=":network:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":network:dokkaHtml/release" data-filterable-set=":network:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-cookie-jar.html"><span>add</span><wbr></wbr><span>Cookie</span><wbr></wbr><span><span>Jar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1984318099%2FFunctions%2F-1323912434"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":network:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="add-cookie-jar.html"><span class="token function">addCookieJar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cookieJar<span class="token operator">: </span><span data-unresolved-link="okhttp3/CookieJar///PointingToDeclaration/">CookieJar</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">NetworkModuleBuilder</a></div><div class="brief "><p class="paragraph">Adds a <span data-unresolved-link="okhttp3/CookieJar///PointingToDeclaration/">CookieJar</span> to the OkHttpClient being built.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1416585645%2FFunctions%2F-1323912434" anchor-label="addInterceptor" id="1416585645%2FFunctions%2F-1323912434" data-filterable-set=":network:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":network:dokkaHtml/release" data-filterable-set=":network:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-interceptor.html"><span>add</span><wbr></wbr><span><span>Interceptor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1416585645%2FFunctions%2F-1323912434"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":network:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="add-interceptor.html"><span class="token function">addInterceptor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">interceptor<span class="token operator">: </span><span data-unresolved-link="okhttp3/Interceptor///PointingToDeclaration/">Interceptor</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">NetworkModuleBuilder</a></div><div class="brief "><p class="paragraph">Adds an interceptor to the OkHttpClient builder.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1623371757%2FFunctions%2F-1323912434" anchor-label="addNetworkInterceptor" id="1623371757%2FFunctions%2F-1323912434" data-filterable-set=":network:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":network:dokkaHtml/release" data-filterable-set=":network:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-network-interceptor.html"><span>add</span><wbr></wbr><span>Network</span><wbr></wbr><span><span>Interceptor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1623371757%2FFunctions%2F-1323912434"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":network:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="add-network-interceptor.html"><span class="token function">addNetworkInterceptor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">interceptor<span class="token operator">: </span><span data-unresolved-link="okhttp3/Interceptor///PointingToDeclaration/">Interceptor</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">NetworkModuleBuilder</a></div><div class="brief "><p class="paragraph">Adds a network interceptor to the OkHttpClient.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="343600954%2FFunctions%2F-1323912434" anchor-label="authenticator" id="343600954%2FFunctions%2F-1323912434" data-filterable-set=":network:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":network:dokkaHtml/release" data-filterable-set=":network:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="authenticator.html"><span><span>authenticator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="343600954%2FFunctions%2F-1323912434"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":network:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="authenticator.html"><span class="token function">authenticator</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">authInterceptor<span class="token operator">: </span><span data-unresolved-link="okhttp3/Authenticator///PointingToDeclaration/">Authenticator</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">NetworkModuleBuilder</a></div><div class="brief "><p class="paragraph">Adds an <span data-unresolved-link="okhttp3/Authenticator///PointingToDeclaration/">Authenticator</span> to the OkHttpClient being built.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-167257474%2FFunctions%2F-1323912434" anchor-label="buildRetrofit" id="-167257474%2FFunctions%2F-1323912434" data-filterable-set=":network:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":network:dokkaHtml/release" data-filterable-set=":network:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="build-retrofit.html"><span>build</span><wbr></wbr><span><span>Retrofit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-167257474%2FFunctions%2F-1323912434"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":network:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="build-retrofit.html"><span class="token function">buildRetrofit</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stringUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="retrofit2/Retrofit///PointingToDeclaration/">Retrofit</span></div><div class="brief "><p class="paragraph">Builds a Retrofit instance using the provided base URL and pre-configured OkHttp client, call adapter factories, and call converter factories.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1793441050%2FFunctions%2F-1323912434" anchor-label="cache" id="1793441050%2FFunctions%2F-1323912434" data-filterable-set=":network:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":network:dokkaHtml/release" data-filterable-set=":network:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cache.html"><span><span>cache</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1793441050%2FFunctions%2F-1323912434"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":network:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="cache.html"><span class="token function">cache</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cache<span class="token operator">: </span><span data-unresolved-link="okhttp3/Cache///PointingToDeclaration/">Cache</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">NetworkModuleBuilder</a></div><div class="brief "><p class="paragraph">Configures the <span data-unresolved-link="okhttp3/OkHttpClient///PointingToDeclaration/">OkHttpClient</span> to use the provided <span data-unresolved-link="okhttp3/Cache///PointingToDeclaration/">Cache</span> for caching network responses.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-336135824%2FFunctions%2F-1323912434" anchor-label="callTimeout" id="-336135824%2FFunctions%2F-1323912434" data-filterable-set=":network:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":network:dokkaHtml/release" data-filterable-set=":network:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="call-timeout.html"><span>call</span><wbr></wbr><span><span>Timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-336135824%2FFunctions%2F-1323912434"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":network:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="call-timeout.html"><span class="token function">callTimeout</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">i<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">unit<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/concurrent/TimeUnit.html">TimeUnit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">NetworkModuleBuilder</a></div><div class="brief "><p class="paragraph">Sets the call timeout for the OkHttpClient.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-398265224%2FFunctions%2F-1323912434" anchor-label="connectTimeout" id="-398265224%2FFunctions%2F-1323912434" data-filterable-set=":network:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":network:dokkaHtml/release" data-filterable-set=":network:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="connect-timeout.html"><span>connect</span><wbr></wbr><span><span>Timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-398265224%2FFunctions%2F-1323912434"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":network:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="connect-timeout.html"><span class="token function">connectTimeout</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">i<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">unit<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/concurrent/TimeUnit.html">TimeUnit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">NetworkModuleBuilder</a></div><div class="brief "><p class="paragraph">Sets the connect timeout for the OkHttpClient.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-194414280%2FFunctions%2F-1323912434" anchor-label="readTimeout" id="-194414280%2FFunctions%2F-1323912434" data-filterable-set=":network:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":network:dokkaHtml/release" data-filterable-set=":network:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="read-timeout.html"><span>read</span><wbr></wbr><span><span>Timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-194414280%2FFunctions%2F-1323912434"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":network:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="read-timeout.html"><span class="token function">readTimeout</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">i<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">unit<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/concurrent/TimeUnit.html">TimeUnit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">NetworkModuleBuilder</a></div><div class="brief "><p class="paragraph">Sets the read timeout for the OkHttpClient.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1328726947%2FFunctions%2F-1323912434" anchor-label="writeTimeout" id="1328726947%2FFunctions%2F-1323912434" data-filterable-set=":network:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":network:dokkaHtml/release" data-filterable-set=":network:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="write-timeout.html"><span>write</span><wbr></wbr><span><span>Timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1328726947%2FFunctions%2F-1323912434"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":network:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="write-timeout.html"><span class="token function">writeTimeout</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">i<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">unit<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/concurrent/TimeUnit.html">TimeUnit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">NetworkModuleBuilder</a></div><div class="brief "><p class="paragraph">Sets the write timeout for the OkHttpClient.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2025 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

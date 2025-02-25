@@ -1,0 +1,85 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.dubizzle.network.anotations////PointingToDeclaration/network/com.dubizzle.network.anotations/index.html
+$dokka.location:com.dubizzle.network.anotations//isAccessTokenRequired/okhttp3.Request#/PointingToDeclaration/network/com.dubizzle.network.anotations/is-access-token-required.html
+$dokka.location:com.dubizzle.network.anotations//isLoginRequired/okhttp3.Request#/PointingToDeclaration/network/com.dubizzle.network.anotations/is-login-required.html
+$dokka.location:com.dubizzle.network.anotations/CacheRequest.Companion///PointingToDeclaration/network/com.dubizzle.network.anotations/-cache-request/-companion/index.html
+$dokka.location:com.dubizzle.network.anotations/CacheRequest.Companion/HALF_HOUR/#/PointingToDeclaration/network/com.dubizzle.network.anotations/-cache-request/-companion/-h-a-l-f_-h-o-u-r.html
+$dokka.location:com.dubizzle.network.anotations/CacheRequest.Companion/ONE_DAY/#/PointingToDeclaration/network/com.dubizzle.network.anotations/-cache-request/-companion/-o-n-e_-d-a-y.html
+$dokka.location:com.dubizzle.network.anotations/CacheRequest.Companion/ONE_HOUR/#/PointingToDeclaration/network/com.dubizzle.network.anotations/-cache-request/-companion/-o-n-e_-h-o-u-r.html
+$dokka.location:com.dubizzle.network.anotations/CacheRequest.Companion/ONE_MINUTE/#/PointingToDeclaration/network/com.dubizzle.network.anotations/-cache-request/-companion/-o-n-e_-m-i-n-u-t-e.html
+$dokka.location:com.dubizzle.network.anotations/CacheRequest.Companion/SEVEN_DAYS/#/PointingToDeclaration/network/com.dubizzle.network.anotations/-cache-request/-companion/-s-e-v-e-n_-d-a-y-s.html
+$dokka.location:com.dubizzle.network.anotations/CacheRequest///PointingToDeclaration/network/com.dubizzle.network.anotations/-cache-request/index.html
+$dokka.location:com.dubizzle.network.anotations/CacheRequest/maxAge/#/PointingToDeclaration/network/com.dubizzle.network.anotations/-cache-request/max-age.html
+$dokka.location:com.dubizzle.network.anotations/LoginRequired///PointingToDeclaration/network/com.dubizzle.network.anotations/-login-required/index.html
+$dokka.location:com.dubizzle.network.anotations/LoginRequired/values/#/PointingToDeclaration/network/com.dubizzle.network.anotations/-login-required/values.html
+$dokka.location:com.dubizzle.network.anotations/NeedsAccessToken///PointingToDeclaration/network/com.dubizzle.network.anotations/-needs-access-token/index.html
+$dokka.location:com.dubizzle.network.anotations/NeedsAccessToken/values/#/PointingToDeclaration/network/com.dubizzle.network.anotations/-needs-access-token/values.html
+$dokka.location:com.dubizzle.network.builder////PointingToDeclaration/network/com.dubizzle.network.builder/index.html
+$dokka.location:com.dubizzle.network.builder/NetworkModuleBuilder///PointingToDeclaration/network/com.dubizzle.network.builder/-network-module-builder/index.html
+$dokka.location:com.dubizzle.network.builder/NetworkModuleBuilder/NetworkModuleBuilder/#/PointingToDeclaration/network/com.dubizzle.network.builder/-network-module-builder/-network-module-builder.html
+$dokka.location:com.dubizzle.network.builder/NetworkModuleBuilder/addCallAdapterFactory/#retrofit2.CallAdapter.Factory/PointingToDeclaration/network/com.dubizzle.network.builder/-network-module-builder/add-call-adapter-factory.html
+$dokka.location:com.dubizzle.network.builder/NetworkModuleBuilder/addConverterFactory/#retrofit2.Converter.Factory/PointingToDeclaration/network/com.dubizzle.network.builder/-network-module-builder/add-converter-factory.html
+$dokka.location:com.dubizzle.network.builder/NetworkModuleBuilder/addCookieJar/#okhttp3.CookieJar/PointingToDeclaration/network/com.dubizzle.network.builder/-network-module-builder/add-cookie-jar.html
+$dokka.location:com.dubizzle.network.builder/NetworkModuleBuilder/addInterceptor/#okhttp3.Interceptor/PointingToDeclaration/network/com.dubizzle.network.builder/-network-module-builder/add-interceptor.html
+$dokka.location:com.dubizzle.network.builder/NetworkModuleBuilder/addNetworkInterceptor/#okhttp3.Interceptor/PointingToDeclaration/network/com.dubizzle.network.builder/-network-module-builder/add-network-interceptor.html
+$dokka.location:com.dubizzle.network.builder/NetworkModuleBuilder/authenticator/#okhttp3.Authenticator/PointingToDeclaration/network/com.dubizzle.network.builder/-network-module-builder/authenticator.html
+$dokka.location:com.dubizzle.network.builder/NetworkModuleBuilder/buildRetrofit/#kotlin.String/PointingToDeclaration/network/com.dubizzle.network.builder/-network-module-builder/build-retrofit.html
+$dokka.location:com.dubizzle.network.builder/NetworkModuleBuilder/cache/#okhttp3.Cache/PointingToDeclaration/network/com.dubizzle.network.builder/-network-module-builder/cache.html
+$dokka.location:com.dubizzle.network.builder/NetworkModuleBuilder/callTimeout/#kotlin.Long#java.util.concurrent.TimeUnit/PointingToDeclaration/network/com.dubizzle.network.builder/-network-module-builder/call-timeout.html
+$dokka.location:com.dubizzle.network.builder/NetworkModuleBuilder/connectTimeout/#kotlin.Long#java.util.concurrent.TimeUnit/PointingToDeclaration/network/com.dubizzle.network.builder/-network-module-builder/connect-timeout.html
+$dokka.location:com.dubizzle.network.builder/NetworkModuleBuilder/readTimeout/#kotlin.Long#java.util.concurrent.TimeUnit/PointingToDeclaration/network/com.dubizzle.network.builder/-network-module-builder/read-timeout.html
+$dokka.location:com.dubizzle.network.builder/NetworkModuleBuilder/writeTimeout/#kotlin.Long#java.util.concurrent.TimeUnit/PointingToDeclaration/network/com.dubizzle.network.builder/-network-module-builder/write-timeout.html
+$dokka.location:com.dubizzle.network.interceptor////PointingToDeclaration/network/com.dubizzle.network.interceptor/index.html
+$dokka.location:com.dubizzle.network.interceptor/CacheInterceptor///PointingToDeclaration/network/com.dubizzle.network.interceptor/-cache-interceptor/index.html
+$dokka.location:com.dubizzle.network.interceptor/CacheInterceptor/CacheInterceptor/#/PointingToDeclaration/network/com.dubizzle.network.interceptor/-cache-interceptor/-cache-interceptor.html
+$dokka.location:com.dubizzle.network.interceptor/CacheInterceptor/intercept/#okhttp3.Interceptor.Chain/PointingToDeclaration/network/com.dubizzle.network.interceptor/-cache-interceptor/intercept.html
+$dokka.location:com.dubizzle.network.models////PointingToDeclaration/network/com.dubizzle.network.models/index.html
+$dokka.location:com.dubizzle.network.models/ErrorResponse///PointingToDeclaration/network/com.dubizzle.network.models/-error-response/index.html
+$dokka.location:com.dubizzle.network.models/ErrorResponse/ErrorResponse/#kotlin.String?/PointingToDeclaration/network/com.dubizzle.network.models/-error-response/-error-response.html
+$dokka.location:com.dubizzle.network.models/ErrorResponse/status/#/PointingToDeclaration/network/com.dubizzle.network.models/-error-response/status.html
+$dokka.location:com.dubizzle.network.models/NetworkException.ApiException///PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-api-exception/index.html
+$dokka.location:com.dubizzle.network.models/NetworkException.ApiException/ApiException/#kotlin.Int#kotlin.String#com.dubizzle.network.models.ErrorResponse?/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-api-exception/-api-exception.html
+$dokka.location:com.dubizzle.network.models/NetworkException.ApiException/errorCode/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-api-exception/error-code.html
+$dokka.location:com.dubizzle.network.models/NetworkException.ApiException/errorResponse/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-api-exception/error-response.html
+$dokka.location:com.dubizzle.network.models/NetworkException.ApiException/message/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-api-exception/message.html
+$dokka.location:com.dubizzle.network.models/NetworkException.DefaultException///PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-default-exception/index.html
+$dokka.location:com.dubizzle.network.models/NetworkException.DefaultException/DefaultException/#kotlin.Int#kotlin.String#kotlin.Throwable?/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-default-exception/-default-exception.html
+$dokka.location:com.dubizzle.network.models/NetworkException.DefaultException/cause/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-default-exception/cause.html
+$dokka.location:com.dubizzle.network.models/NetworkException.DefaultException/errorCode/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-default-exception/error-code.html
+$dokka.location:com.dubizzle.network.models/NetworkException.DefaultException/message/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-default-exception/message.html
+$dokka.location:com.dubizzle.network.models/NetworkException.IOException///PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-i-o-exception/index.html
+$dokka.location:com.dubizzle.network.models/NetworkException.IOException/IOException/#kotlin.Int#kotlin.String/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-i-o-exception/-i-o-exception.html
+$dokka.location:com.dubizzle.network.models/NetworkException.IOException/errorCode/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-i-o-exception/error-code.html
+$dokka.location:com.dubizzle.network.models/NetworkException.IOException/message/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-i-o-exception/message.html
+$dokka.location:com.dubizzle.network.models/NetworkException.IllegalStateException///PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-illegal-state-exception/index.html
+$dokka.location:com.dubizzle.network.models/NetworkException.IllegalStateException/IllegalStateException/#kotlin.Int#kotlin.String/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-illegal-state-exception/-illegal-state-exception.html
+$dokka.location:com.dubizzle.network.models/NetworkException.IllegalStateException/errorCode/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-illegal-state-exception/error-code.html
+$dokka.location:com.dubizzle.network.models/NetworkException.IllegalStateException/message/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-illegal-state-exception/message.html
+$dokka.location:com.dubizzle.network.models/NetworkException.NoInternet///PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-no-internet/index.html
+$dokka.location:com.dubizzle.network.models/NetworkException.NoInternet/NoInternet/#kotlin.Int#kotlin.String/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-no-internet/-no-internet.html
+$dokka.location:com.dubizzle.network.models/NetworkException.NoInternet/errorCode/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-no-internet/error-code.html
+$dokka.location:com.dubizzle.network.models/NetworkException.NoInternet/message/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-no-internet/message.html
+$dokka.location:com.dubizzle.network.models/NetworkException.UnknownHostException///PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-unknown-host-exception/index.html
+$dokka.location:com.dubizzle.network.models/NetworkException.UnknownHostException/UnknownHostException/#kotlin.Int#kotlin.String/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-unknown-host-exception/-unknown-host-exception.html
+$dokka.location:com.dubizzle.network.models/NetworkException.UnknownHostException/errorCode/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-unknown-host-exception/error-code.html
+$dokka.location:com.dubizzle.network.models/NetworkException.UnknownHostException/message/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/-unknown-host-exception/message.html
+$dokka.location:com.dubizzle.network.models/NetworkException///PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/index.html
+$dokka.location:com.dubizzle.network.models/NetworkException/errorCode/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/error-code.html
+$dokka.location:com.dubizzle.network.models/NetworkException/errorResponse/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/error-response.html
+$dokka.location:com.dubizzle.network.models/NetworkException/message/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-exception/message.html
+$dokka.location:com.dubizzle.network.models/NetworkResult.Error///PointingToDeclaration/network/com.dubizzle.network.models/-network-result/-error/index.html
+$dokka.location:com.dubizzle.network.models/NetworkResult.Error/Error/#com.dubizzle.network.models.NetworkException/PointingToDeclaration/network/com.dubizzle.network.models/-network-result/-error/-error.html
+$dokka.location:com.dubizzle.network.models/NetworkResult.Error/error/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-result/-error/error.html
+$dokka.location:com.dubizzle.network.models/NetworkResult.Success///PointingToDeclaration/network/com.dubizzle.network.models/-network-result/-success/index.html
+$dokka.location:com.dubizzle.network.models/NetworkResult.Success/Success/#TypeParam(bounds=[kotlin.Any?])?/PointingToDeclaration/network/com.dubizzle.network.models/-network-result/-success/-success.html
+$dokka.location:com.dubizzle.network.models/NetworkResult.Success/data/#/PointingToDeclaration/network/com.dubizzle.network.models/-network-result/-success/data.html
+$dokka.location:com.dubizzle.network.models/NetworkResult///PointingToDeclaration/network/com.dubizzle.network.models/-network-result/index.html
+$dokka.location:com.dubizzle.network.utils////PointingToDeclaration/network/com.dubizzle.network.utils/index.html
+$dokka.location:com.dubizzle.network.utils//handleApi/#kotlin.coroutines.SuspendFunction0[retrofit2.Response[TypeParam(bounds=[kotlin.Any])?]]/PointingToDeclaration/network/com.dubizzle.network.utils/handle-api.html
+com.dubizzle.network.anotations
+com.dubizzle.network.builder
+com.dubizzle.network.interceptor
+com.dubizzle.network.models
+com.dubizzle.network.utils
+
