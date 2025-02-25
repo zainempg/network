@@ -1,0 +1,66 @@
+name: Code Coverage Check
+
+on:
+  pull_request:
+    branches:
+      - develop
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Run tests with JaCoCo
+        run: ./gradlew jacocoTestReport
+
+      - name: List build directory contents
+        run: ls dubizzleUtil/build/reports/jacoco/jacocoTestReport/
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Check coverage
+        env:
+          CC_PERCENTAGE: 10
+        run: |
+          coverage=$(python3 python/jacoco_coverage.py)
+          previousCoverage=$CC_PERCENTAGE
+          echo "Expected Code Coverage ${previousCoverage}%"
+          echo "Coverage output: $coverage"
+          echo "coverage=${coverage}" >> $GITHUB_ENV
+
+      - name: Post coverage result
+        uses: actions/github-script@v6
+        env:
+          CC_PERCENTAGE: 10
+        with:
+          script: |
+            const coverage = process.env.coverage;
+            const previousCoverage = process.env.CC_PERCENTAGE;
+            const message = `📊 Test Coverage: ${coverage}%`;
+            const status = coverage < previousCoverage ? `❌ Coverage is below ${previousCoverage}%  Consider adding more tests.` : `✅ Coverage is above ${previousCoverage}%. Good job!`;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `${message}\n${status}`
+            });
+            if (coverage < previousCoverage) {
+              core.setFailed(status);
+            }
