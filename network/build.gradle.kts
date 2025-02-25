@@ -1,12 +1,10 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-
     kotlin("plugin.serialization") version "2.1.10"
     id("maven-publish")
     id("org.jetbrains.dokka") version "1.8.10"
     id("jacoco") // Add JaCoCo plugin
-
 }
 
 android {
