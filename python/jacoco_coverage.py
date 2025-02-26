@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 
 # Path to the JaCoCo XML report
-JACOCO_XML_PATH = "notification/build/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
+JACOCO_XML_PATH = "network/build/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
 
 def get_coverage_percentage(xml_path):
     tree = ET.parse(xml_path)
