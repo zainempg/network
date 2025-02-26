@@ -40,5 +40,5 @@ jobs:
         run: ./gradlew publish
         env:
           GPR_TOKEN: ${{ secrets.GPR_TOKEN }}
-#          GPR_USERNAME: ${{ secrets.GPR_USERNAME }}
+          GPR_USERNAME: ${{ secrets.GPR_USERNAME }}
           VERSION_NAME: ${{ github.event.inputs.release_version_name }}
