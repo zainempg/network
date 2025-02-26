@@ -28,7 +28,7 @@ jobs:
         run: ./gradlew jacocoTestReport
 
       - name: List build directory contents
-        run: ls dubizzleUtil/build/reports/jacoco/jacocoTestReport/
+        run: ls network/build/reports/jacoco/jacocoTestReport/
 
       - name: Setup Python
         uses: actions/setup-python@v4
