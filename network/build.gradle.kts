@@ -72,8 +72,10 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.dubizzle"  // Change to your GitHub username
             artifactId = "network"             // Change to your library name
-            version = System.getenv("VERSION_NAME")?.plus("_beta") ?: "0.0.4"
-
+            version = System.getenv("VERSION_NAME")
+                ?.takeIf { it.isNotEmpty() }
+                ?.plus("_beta")
+                ?: "0.0.1"
             afterEvaluate {
                 from(components["release"])
             }
@@ -83,7 +85,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/zainempg/network")
+            url = uri("https://maven.pkg.github.com/dubizzle/dubizzle_android_network")
             credentials {
                 val username = System.getenv("GPR_USERNAME") ?: project.findProperty("GPR_USERNAME") as String?
                 val password = System.getenv("GPR_TOKEN") ?: project.findProperty("GPR_TOKEN") as String?
