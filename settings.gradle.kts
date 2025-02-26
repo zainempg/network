@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "DubizzleNetworkModule"
 include(":app")
- 
+include(":network")
+
+

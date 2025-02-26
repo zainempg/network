@@ -1,0 +1,42 @@
+name: Deploy Dokka Docs
+
+on:
+  pull_request:
+    branches:
+      - master  # publish when PR created toward master branch
+
+jobs:
+  deployDocs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17' # Adjust to match your project
+
+      - name: Build Docs With dokka And Run Code Coverage Report
+        run: ./gradlew dokkaHtml jacocoTestReport
+
+#      - name: Run tests with JaCoCo
+#        run: ./gradlew jacocoTestReport
+
+      - name: List build directory contents
+        run: find . -print
+
+      - name: Deploy Docs to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: network/build/dokka
+          token: ${{ secrets.DEPLOY_TOKEN }}
+          target-folder: /docs/dokka/
+
+      - name: Deploy Code Coverage Report to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: network/build/reports/jacoco/jacocoTestReport/html
+          token: ${{ secrets.DEPLOY_TOKEN }}
+          target-folder: docs/jacoco/
